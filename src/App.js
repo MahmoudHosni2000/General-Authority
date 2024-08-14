@@ -1,21 +1,23 @@
-// App.js
-
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import AuthPage from './Components/Auth/AuthPage';
-import Map from './Components/Map/Map';
-import List from './Components/List/List';
-import Location from './Components/List/Location';
+import React from "react";
+import Header from "./Components/Header";
+import Features from "./Components/Features";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+import Chatbot from "./Components/Chatbot";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<AuthPage />} />
-        <Route path="/map/list" element={<List />} />
-        <Route path="/map" element={<Map />} />
-        <Route path="/location" element={<Location />} />
-      </Routes>
+    <div
+      className="App bg-cover bg-center min-h-screen flex flex-col justify-between"
+      style={{
+        backgroundImage: "url('/image.jpg')",
+      }}
+    >
+      <Header />
+      <Features />
+      <Contact />
+      <Chatbot />
+      <Footer />
     </div>
   );
 }
