@@ -6,7 +6,7 @@ import FQS from "../FQS.json";
 const theme = {
   background: "#f5f8fb",
   fontFamily: "Arial, sans-serif",
-  headerBgColor: "#007BFF",
+  headerBgColor: "#107BFC",
   headerFontColor: "#fff",
   headerFontSize: "15px",
   botBubbleColor: "#007BFF",

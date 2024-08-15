@@ -2,9 +2,9 @@ import React from "react";
 
 export default function LangToggle() {
   return (
-    <div className="flex flex-row justify-center select-none">
+    <div className="flex flex-row select-none">
       <div className="flex flex-row items-center right-1">
-        <button className="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
+        <button className="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-white hover:text-gray-700 focus:text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
           <span className="text-md">En</span>
           <span className="ml-1">
             <img
@@ -15,7 +15,7 @@ export default function LangToggle() {
           </span>
         </button>
 
-        <button className="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
+        <button className="p-2 flex flex-row items-center border border-gray-300 text-sm font-medium text-white hover:text-gray-700 focus:text-gray-700 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none">
           <span className="text-md">Ar</span>
           <span className="ml-1">
             <img

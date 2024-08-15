@@ -1,25 +1,22 @@
 import React from "react";
-import LangToggle from "./LangToggle";
-import { Button } from "@material-tailwind/react";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu({ isDrawer }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact");
+  };
   return (
     <nav
       className={`${
-        isDrawer ? "flex flex-col text-black mx-3" : "hidden md:flex items-center gap-4"
+        isDrawer
+          ? "flex flex-col text-black mx-3"
+          : "hidden md:flex items-center gap-4"
       }`}
     >
-      <LangToggle />
       <a
-        href="#services"
-        className={`${
-          isDrawer ? "text-black hover:text-gray-700 mt-5" : "hover:text-gray-300"
-        }`}
-      >
-        أسئلة شائعة
-      </a>
-      <a
-        href="#complaints"
+        href="complaints"
         className={`${
           isDrawer ? "text-black hover:text-gray-700" : "hover:text-gray-300"
         }`}
@@ -27,21 +24,14 @@ export default function Menu({ isDrawer }) {
         الشكاوي
       </a>
       <a
+        onClick={handleClick}
         href="#contact"
         className={`${
           isDrawer ? "text-black hover:text-gray-700" : "hover:text-gray-300"
         }`}
       >
-        الصفحة الرئيسية
+        تواصل معنا
       </a>
-      <Button
-        className={`${
-          isDrawer ? "bg-black text-white m-3" : "bg-[#424242] text-white m-0"
-        } backdrop-blur-0`}
-        ripple={true}
-      >
-        تسجيل الدخول
-      </Button>
     </nav>
   );
 }

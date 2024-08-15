@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Menu from "./Menu";
 import { Drawer, IconButton, Typography } from "@material-tailwind/react";
+import LangToggle from "./LangToggle";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -12,10 +13,10 @@ const Header = () => {
     <>
       <header
         className="fixed top-0 left-0 w-full bg-cover bg-no-repeat text-white p-2 border-b-2 border-gray-700 z-50"
-        style={{ backgroundImage: "url('/photo.jpg')"}}
+        style={{ backgroundImage: "url('/photo.jpg')" }}
       >
         <div className="relative container mx-auto flex justify-between items-center">
-          <Typography variant="h4" className="relative"></Typography>
+          <Typography variant="h4" className="relative"><LangToggle /></Typography>
 
           <button
             className="md:hidden text-white relative"
@@ -27,6 +28,7 @@ const Header = () => {
             <Menu />
           </div>
         </div>
+        
       </header>
 
       <Drawer open={drawerOpen} onClose={closeDrawer}>

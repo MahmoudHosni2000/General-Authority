@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: #040714;
   color: #f9f9f9;
   margin: 0;
   padding: 0;
@@ -33,8 +32,9 @@ body {
 input {
   color: #000; /* Change this to your desired text color */
 }
-.custom-input {
-  border-color: black !important;
+
+.custom-input:focus {
+  border-color: none !important;
 }
 
 .video-container {
@@ -52,4 +52,11 @@ input {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.direction-rtl {
+  direction: rtl !important;
+  text-align: right !important;
 }
